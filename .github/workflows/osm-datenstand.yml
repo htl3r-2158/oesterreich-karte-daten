@@ -1,0 +1,80 @@
+name: OSM-Datenstand
+
+# Täglich die OpenStreetMap-Daten für https://karte.lupos.li holen und im Zweig „data“ veröffentlichen.
+# Die Karte lädt sie über jsDelivr (CDN) statt bei jedem Besuch die Overpass-Server zu fragen.
+on:
+  schedule:
+    - cron: '23 1 * * *'        # täglich 01:23 UTC
+  workflow_dispatch:
+    inputs:
+      site:
+        description: 'Karte, aus der die Abfragen gelesen werden'
+        default: 'https://karte.lupos.li/'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: osm-datenstand
+  cancel-in-progress: false
+
+jobs:
+  datenstand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Abfragen aus der Karte lesen
+        run: |
+          node extract-queries.mjs "${{ github.event.inputs.site || 'https://karte.lupos.li/' }}" queries.json \
+            || { echo "Karte nicht erreichbar, nehme gespeicherte queries.json"; test -s queries.fallback.json && cp queries.fallback.json queries.json; }
+          test -s queries.json
+
+      - name: Daten bei Overpass holen
+        run: python fetch.py --queries queries.json --out out --parallel 2
+
+      - name: Im Zweig „data“ veröffentlichen
+        run: |
+          cd out
+          git init -q -b data
+          git config user.name  "OSM-Datenstand"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add files
+          git commit -qm "Daten $(date -u +%F)"
+          SHA=$(git rev-parse HEAD)
+          # Inhaltsverzeichnis zeigt auf den unveränderlichen Commit mit den Daten
+          python - "$SHA" <<'EOF'
+          import json, sys
+          m = json.load(open('manifest.partial.json', encoding='utf-8'))
+          m['sha'] = sys.argv[1]
+          json.dump(m, open('manifest.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          EOF
+          git add manifest.json
+          git commit -qm "Inhaltsverzeichnis $(date -u +%F)"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
+
+      - name: CDN-Zwischenspeicher für das Inhaltsverzeichnis leeren
+        run: curl -fsS "https://purge.jsdelivr.net/gh/${{ github.repository }}@data/manifest.json" || true
+
+      - name: Zusammenfassung
+        if: always()
+        run: |
+          test -f out/manifest.json && python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          m = json.load(open('out/manifest.json', encoding='utf-8'))
+          print(f"### Datenstand: {m['ok']} von {m['count']} Paketen\n")
+          print("| Paket | Objekte | komprimiert | Quelle |\n|---|---:|---:|---|")
+          for k, v in sorted(m['files'].items(), key=lambda kv: kv[1].get('label', '')):
+              print(f"| {v.get('label', k)} | {v.get('n', 0):,} | {v.get('gz', 0) / 1e6:.2f} MB | {'alt (übernommen)' if v.get('old') else 'neu'} |")
+          for f in m['failed']:
+              print(f"\n⚠ {f['key']}: {' | '.join(f['errors'])}")
+          EOF
