@@ -46,6 +46,8 @@ def overpass(ep, q):
         raise RuntimeError(rem[:160])
     if not isinstance(j.get('elements'), list):
         raise RuntimeError('keine elements in der Antwort')
+    if not j['elements']:
+        raise RuntimeError('leere Antwort (0 Objekte)')
     return j
 
 
@@ -128,7 +130,7 @@ def main():
                 f.write(gz)
             return key, {'f': path, 't': int(time.time() * 1000), 'n': len(j['elements']), 'raw': len(raw), 'gz': len(gz), 'label': item['label']}, None
         p = prev.get(key)
-        if p and p.get('sha') and time.time() * 1000 - p['t'] < a.keep_days * 864e5:
+        if p and p.get('sha') and p.get('n') and time.time() * 1000 - p['t'] < a.keep_days * 864e5:
             try:
                 gz = get(f"https://raw.githubusercontent.com/{a.repo}/{p['sha']}/{p['f']}", timeout=180)
                 with open(os.path.join(a.out, path), 'wb') as f:
