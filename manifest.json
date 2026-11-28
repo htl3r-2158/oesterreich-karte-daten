@@ -1,0 +1,361 @@
+{
+ "generated": 1795860087877,
+ "files": {
+  "b95b9feaa6ddb70c": {
+   "f": "files/b95b9feaa6ddb70c.json.gz",
+   "t": 1795856314796,
+   "n": 32,
+   "raw": 8517942,
+   "gz": 1795561,
+   "label": "Grenzen der Bundesländer und Wiener Bezirke"
+  },
+  "2b1e0b38bd1b6fff": {
+   "f": "files/2b1e0b38bd1b6fff.json.gz",
+   "t": 1795856498917,
+   "n": 1683,
+   "raw": 2126333,
+   "gz": 461180,
+   "label": "Spitäler, Heime und Ambulanzen"
+  },
+  "12495ada893796fb": {
+   "f": "files/12495ada893796fb.json.gz",
+   "t": 1795856356004,
+   "n": 8359,
+   "raw": 3461330,
+   "gz": 531610,
+   "label": "Arztpraxen in ganz Österreich"
+  },
+  "057f7e625565035d": {
+   "f": "files/057f7e625565035d.json.gz",
+   "t": 1795856405322,
+   "n": 3548,
+   "raw": 1279936,
+   "gz": 228026,
+   "label": "Zahnärzt*innen und Apotheken"
+  },
+  "3f68179305285cb4": {
+   "f": "files/3f68179305285cb4.json.gz",
+   "t": 1795857087034,
+   "n": 93,
+   "raw": 18477821,
+   "gz": 3953937,
+   "label": "Politische Bezirke"
+  },
+  "6acfac337f92cd21": {
+   "f": "files/6acfac337f92cd21.json.gz",
+   "t": 1795856579229,
+   "n": 10958,
+   "raw": 8230687,
+   "gz": 1763048,
+   "label": "Bildung"
+  },
+  "1b7c5980695f2c91": {
+   "f": "files/1b7c5980695f2c91.json.gz",
+   "t": 1795856630765,
+   "n": 1753,
+   "raw": 750950,
+   "gz": 140075,
+   "label": "Bahn & Flug (1/2)"
+  },
+  "c3ae2ca283740b67": {
+   "f": "files/c3ae2ca283740b67.json.gz",
+   "t": 1795856684846,
+   "n": 29214,
+   "raw": 29039887,
+   "gz": 3495500,
+   "label": "Bahn & Flug (2/2)"
+  },
+  "9caa163eeff7054f": {
+   "f": "files/9caa163eeff7054f.json.gz",
+   "t": 1795856743404,
+   "n": 4117,
+   "raw": 4216732,
+   "gz": 1000379,
+   "label": "Sport, Freizeit & Skigebiete (1/2)"
+  },
+  "6886195be6cec105": {
+   "f": "files/6886195be6cec105.json.gz",
+   "t": 1795856778425,
+   "n": 2705,
+   "raw": 1741278,
+   "gz": 395055,
+   "label": "Sport, Freizeit & Skigebiete (2/2)"
+  },
+  "1a0e24893147610b": {
+   "f": "files/1a0e24893147610b.json.gz",
+   "t": 1795856835423,
+   "n": 4630,
+   "raw": 930297,
+   "gz": 149324,
+   "label": "Telekommunikation (1/3)"
+  },
+  "bdce6634740caf75": {
+   "f": "files/bdce6634740caf75.json.gz",
+   "t": 1795856871536,
+   "n": 87,
+   "raw": 72040,
+   "gz": 15570,
+   "label": "Telekommunikation (2/3)"
+  },
+  "28bcd2c420989a0b": {
+   "f": "files/28bcd2c420989a0b.json.gz",
+   "t": 1795856916264,
+   "n": 1685,
+   "raw": 1469406,
+   "gz": 325083,
+   "label": "Telekommunikation (3/3)"
+  },
+  "575356e08beee252": {
+   "f": "files/575356e08beee252.json.gz",
+   "t": 1795857501700,
+   "n": 8711,
+   "raw": 5001644,
+   "gz": 980477,
+   "label": "Verwaltung & Sicherheit"
+  },
+  "b023aea4ad1e5cc1": {
+   "f": "files/b023aea4ad1e5cc1.json.gz",
+   "t": 1795857770881,
+   "n": 7368,
+   "raw": 3813381,
+   "gz": 728982,
+   "label": "Energie (1/3)"
+  },
+  "5729a3dd323b6044": {
+   "f": "files/5729a3dd323b6044.json.gz",
+   "t": 1795857550307,
+   "n": 5277,
+   "raw": 4282028,
+   "gz": 868000,
+   "label": "Energie (2/3)"
+  },
+  "6a7d15a8e6ec1a76": {
+   "f": "files/6a7d15a8e6ec1a76.json.gz",
+   "t": 1795857648239,
+   "n": 857,
+   "raw": 364982,
+   "gz": 66453,
+   "label": "Energie (3/3)"
+  },
+  "bf4325318ff91602": {
+   "f": "files/bf4325318ff91602.json.gz",
+   "t": 1795858336397,
+   "n": 2241,
+   "raw": 1514396,
+   "gz": 362217,
+   "label": "Kultur"
+  },
+  "106e27bb40366c9c": {
+   "f": "files/106e27bb40366c9c.json.gz",
+   "t": 1795857837916,
+   "n": 61354,
+   "raw": 14798402,
+   "gz": 1594693,
+   "label": "Öffis & Sharing (1/2)"
+  },
+  "90a25b6609468090": {
+   "f": "files/90a25b6609468090.json.gz",
+   "t": 1795857895677,
+   "n": 1830,
+   "raw": 1114879,
+   "gz": 204024,
+   "label": "Öffis & Sharing (2/2)"
+  },
+  "258dbe5d3dc897ac": {
+   "f": "files/258dbe5d3dc897ac.json.gz",
+   "t": 1795857953233,
+   "n": 16980,
+   "raw": 11740603,
+   "gz": 1568790,
+   "label": "Straße & Auto (1/2)"
+  },
+  "28f0089a14aa6237": {
+   "f": "files/28f0089a14aa6237.json.gz",
+   "t": 1795858085350,
+   "n": 14790,
+   "raw": 6329335,
+   "gz": 1122547,
+   "label": "Straße & Auto (2/2)"
+  },
+  "ac67e1ed5ab5f2bc": {
+   "f": "files/ac67e1ed5ab5f2bc.json.gz",
+   "t": 1795858495326,
+   "n": 3318,
+   "raw": 1261775,
+   "gz": 220083,
+   "label": "Notfall & Rettung"
+  },
+  "03c1f40f3a65edfd": {
+   "f": "files/03c1f40f3a65edfd.json.gz",
+   "t": 1795858415531,
+   "n": 4046,
+   "raw": 2935661,
+   "gz": 650221,
+   "label": "Wasser & Abfall (1/2)"
+  },
+  "f59813c9679bd3ba": {
+   "f": "files/f59813c9679bd3ba.json.gz",
+   "t": 1795858456250,
+   "n": 8485,
+   "raw": 1360058,
+   "gz": 214700,
+   "label": "Wasser & Abfall (2/2)"
+  },
+  "bf16526dffe756ef": {
+   "f": "files/bf16526dffe756ef.json.gz",
+   "t": 1795858537112,
+   "n": 15804,
+   "raw": 7474822,
+   "gz": 1391741,
+   "label": "Nahversorgung & Geld"
+  },
+  "c019678ab30fb522": {
+   "f": "files/c019678ab30fb522.json.gz",
+   "t": 1795858671130,
+   "n": 6812,
+   "raw": 5296253,
+   "gz": 1141671,
+   "label": "Tourismus & Natur (1/6)"
+  },
+  "f865e6f9700c31ae": {
+   "f": "files/f865e6f9700c31ae.json.gz",
+   "t": 1795859072509,
+   "n": 7631,
+   "raw": 2815049,
+   "gz": 647532,
+   "label": "Tourismus & Natur (2/6)"
+  },
+  "c656341019d8b082": {
+   "f": "files/c656341019d8b082.json.gz",
+   "t": 1795858709438,
+   "n": 171,
+   "raw": 214336,
+   "gz": 54054,
+   "label": "Tourismus & Natur (3/6)"
+  },
+  "bdcd6c0a35f099f4": {
+   "f": "files/bdcd6c0a35f099f4.json.gz",
+   "t": 1795858760290,
+   "n": 15916,
+   "raw": 2675112,
+   "gz": 558352,
+   "label": "Tourismus & Natur (4/6)"
+  },
+  "3409d873dfd0f813": {
+   "f": "files/3409d873dfd0f813.json.gz",
+   "t": 1795859142179,
+   "n": 10,
+   "raw": 1320790,
+   "gz": 284972,
+   "label": "Tourismus & Natur (5/6)"
+  },
+  "4bc71fa461ba07bf": {
+   "f": "files/4bc71fa461ba07bf.json.gz",
+   "t": 1795859144698,
+   "n": 16963,
+   "raw": 11721602,
+   "gz": 2563552,
+   "label": "Tourismus & Natur (6/6)"
+  },
+  "833752c6e02ab551": {
+   "f": "files/833752c6e02ab551.json.gz",
+   "t": 1795859604147,
+   "n": 24733,
+   "raw": 16432433,
+   "gz": 3375932,
+   "label": "Gemeinschaft & Religion (1/2)"
+  },
+  "102f696cec39ae2a": {
+   "f": "files/102f696cec39ae2a.json.gz",
+   "t": 1795859225284,
+   "n": 3282,
+   "raw": 2927287,
+   "gz": 660822,
+   "label": "Gemeinschaft & Religion (2/2)"
+  },
+  "eb0f43d1b5d7d507": {
+   "f": "files/eb0f43d1b5d7d507.json.gz",
+   "t": 1795859272620,
+   "n": 3657,
+   "raw": 13326299,
+   "gz": 3144477,
+   "label": "Topographie & Gewässer (1/3)"
+  },
+  "b728886fdfacf258": {
+   "f": "files/b728886fdfacf258.json.gz",
+   "t": 1795859342092,
+   "n": 2124,
+   "raw": 8581729,
+   "gz": 1904785,
+   "label": "Topographie & Gewässer (2/3)"
+  },
+  "932c7a19d6787821": {
+   "f": "files/932c7a19d6787821.json.gz",
+   "t": 1795859424251,
+   "n": 8107,
+   "raw": 1234996,
+   "gz": 247846,
+   "label": "Topographie & Gewässer (3/3)"
+  },
+  "82a338c77fec08ac": {
+   "f": "files/82a338c77fec08ac.json.gz",
+   "t": 1795860087864,
+   "n": 4026,
+   "raw": 3393431,
+   "gz": 752723,
+   "label": "Wirtschaft & Industrie (1/3)"
+  },
+  "ea932899a8baa4b2": {
+   "f": "files/ea932899a8baa4b2.json.gz",
+   "t": 1795859650968,
+   "n": 3871,
+   "raw": 4814612,
+   "gz": 1086291,
+   "label": "Wirtschaft & Industrie (2/3)"
+  },
+  "f4ac1504b3af81da": {
+   "f": "files/f4ac1504b3af81da.json.gz",
+   "t": 1795859710205,
+   "n": 9855,
+   "raw": 10346611,
+   "gz": 2415693,
+   "label": "Wirtschaft & Industrie (3/3)"
+  },
+  "57c4e79abf83bc3e": {
+   "f": "files/57c4e79abf83bc3e.json.gz",
+   "t": 1795859781452,
+   "n": 47031,
+   "raw": 39372447,
+   "gz": 7909968,
+   "label": "Land- & Forstwirtschaft (1/2)"
+  },
+  "ce60d9379760e9ac": {
+   "f": "files/ce60d9379760e9ac.json.gz",
+   "t": 1795859832177,
+   "n": 1538,
+   "raw": 284524,
+   "gz": 59098,
+   "label": "Land- & Forstwirtschaft (2/2)"
+  },
+  "ac06b562cbedb87b": {
+   "f": "files/ac06b562cbedb87b.json.gz",
+   "t": 1795859872729,
+   "n": 6424,
+   "raw": 5346920,
+   "gz": 987685,
+   "label": "Leitungen & Pipelines (1/2)"
+  },
+  "0717163683d6c7e9": {
+   "f": "files/0717163683d6c7e9.json.gz",
+   "t": 1795859924416,
+   "n": 1336,
+   "raw": 812251,
+   "gz": 145142,
+   "label": "Leitungen & Pipelines (2/2)"
+  }
+ },
+ "failed": [],
+ "count": 44,
+ "ok": 44,
+ "sha": "af263b462341ff7de2967d4f816aaa18f76c5659"
+}
